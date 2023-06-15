@@ -1,0 +1,13 @@
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+>>> say_my_name()
+
+>>> say_my_name(["Jon", "Snow", "Aegon"], "Targ")
+
+>>> say_my_name(5)
+
+>>> say_my_name(1, 2)
+
+>>> say_my_name(None)
+
+>>> say_my_name("Jon", None)
