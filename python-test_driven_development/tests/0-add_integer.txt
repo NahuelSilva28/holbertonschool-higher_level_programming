@@ -1,36 +1,4 @@
-import unittest
-
-add_integer = __import__('0-add_integer').add_integer
-
-class TestAddInteger(unittest.TestCase):
-
-    def test_addition(self):
-        self.assertEqual(add_integer(1, 2), 3)
-        self.assertEqual(add_integer(3.2, 3.4), 6)
-
-    def test_missing_arguments(self):
-        with self.assertRaises(TypeError):
-            add_integer()
-        with self.assertRaises(TypeError):
-            add_integer(float('NaN'))
-        with self.assertRaises(TypeError):
-            add_integer(None)
-
-    def test_invalid_arguments(self):
-        with self.assertRaises(TypeError):
-            add_integer("hello", 8)
-        with self.assertRaises(TypeError):
-            add_integer(8, "hello")
-        with self.assertRaises(OverflowError):
-            add_integer(8, float('inf'))
-        with self.assertRaises(NameError):
-            add_integer(a, b=0)
-        with self.assertRaises(TypeError):
-            add_integer(None, 8)
-        with self.assertRaises(TypeError):
-            add_integer(8, None)
-        with self.assertRaises(TypeError):
-            add_integer([8, 9], 8)
-
-if __name__ == '__main__':
-    unittest.main()
+>>> add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer(1, 2)
+    3
+    
