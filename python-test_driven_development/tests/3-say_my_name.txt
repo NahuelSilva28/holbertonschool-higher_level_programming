@@ -11,3 +11,5 @@
 >>> say_my_name(None)
 
 >>> say_my_name("Jon", None)
+
+>>> say_my_name("None", None)
