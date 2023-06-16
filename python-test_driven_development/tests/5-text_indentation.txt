@@ -1,0 +1,21 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("hi")
+
+>>> text_indentation("")
+
+>>> text_indentation("None")
+
+>>> text_indentation("hi.ha.he.hi.ho.hu")
+
+>>> text_indentation("2")
+
+>>> text_indentation("-2")
+
+>>> text_indentation("sadasdasdasdsadawqdasdsad")
+
+>>> text_indentation(None)
+
+>>> text_indentation("'¿'-.asd,-'")
+
+>>> text_indentation("0")
