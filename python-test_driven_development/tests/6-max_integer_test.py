@@ -2,7 +2,7 @@
 """test"""
 
 import unittest
-from max_integer import max_integer
+max_integer = __import__('6-max_integer').max_integer
 """_summary_
 """
 
@@ -20,6 +20,4 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([0]), 0)
         self.assertEqual(max_integer([1, 2]), 2)
         self.assertEqual(max_integer([1]), 1)
-
-if __name__ == '__main__':
-    unittest.main()
+        
