@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 class Rectangle:
     """Write a class Rectangle that defines a rectangle by: (based on 7-rectangle.py)"""
 
