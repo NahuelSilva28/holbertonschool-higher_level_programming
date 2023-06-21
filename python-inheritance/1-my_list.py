@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Lookup"""
+"""MYLIST"""
 
 
 class MyList(list):
