@@ -1,4 +1,5 @@
 >>> MyList = __import__("1-my_list").MyList
+
     >>> list = MyList()
     >>> list.append(0)
     >>> list.append(1)
