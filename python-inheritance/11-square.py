@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 """
-Write a class Square that inheri
-ts from Rectangle (9-rectangle.py). (task based on 10-square.py).
+Write a class Square that inherits from Rectangle 
+(9-rectangle.py). (task based on 10-square.py).
 """
-from typing import Union
 Rectangle = __import__('9-rectangle').Rectangle
 
 
@@ -23,9 +22,9 @@ class Square(Rectangle):
         """
         Returns a string representation of the square
         """
-        return f"[Square] {self._Rectangle__width}/{self._Rectangle__height}"
+        return "[Square] {}/{}".format(self._Rectangle__width, self._Rectangle__height)
 
-    def area(self) -> Union[int, float]:
+    def area(self) -> int:
         """
         Computes the area of the square
         """
