@@ -1,13 +1,12 @@
 #!/usr/bin/python3
-"""MYLIST"""
+"""MY LIST"""
 
 
 class MyList(list):
+    """my list"""
     def print_sorted(self):
-        """Write a class MyList that inherits from list:
-        """
-        if not all(isinstance(x, int) for x in self):
-            raise TypeError("Only integers")
+        for i in self:
+            if type(i) is not int:
+                raise TypeError("all the values of the list must be integers")
+        print(sorted(self))
         
-        sorted_list = sorted(self)
-        print(sorted_list)
