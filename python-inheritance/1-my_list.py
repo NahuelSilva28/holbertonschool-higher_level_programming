@@ -1,12 +1,13 @@
 #!/usr/bin/python3
-"""MY LIST"""
+"""my list"""
 
 
 class MyList(list):
-    """my list"""
+    """_summary_
+
+    Args:
+        list (_type_): _description_
+    """
     def print_sorted(self):
-        for i in self:
-            if type(i) is not int:
-                raise TypeError("all the values of the list must be integers")
-        print(sorted(self))
-        
+        sorted_list = sorted(self)
+        print(sorted_list)
