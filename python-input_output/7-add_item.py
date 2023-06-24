@@ -3,19 +3,21 @@
 """
 
 
+import os.path
 import sys
+from os import path
 
 
-save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
+save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 
-filename = "add_item.json"
-try:
-    list = load_from_json_file(filename)
-    for i in range(1, len(sys.argv)):
-        list.append(sys.argv[i]), save_to_json_file(list, filename)
-except Exception:
-    list = []
-    for i in range(1, len(sys.argv)):
-        list.append(sys.argv[i]), save_to_json_file(list, filename)
-    
+elems = sys.argv
+f = "add_item.json"
+elems.pop(0)
+
+if path.exists(f) is False:
+    save_to_json_file(elems, f)
+else:
+    f_data = load_from_json_file(f)
+    f_data.extend(elems)
+    save_to_json_file(f_data, f)
