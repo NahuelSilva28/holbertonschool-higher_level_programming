@@ -1,9 +1,9 @@
 # Python - Everything is object
 
-![alt text](i[mageURL](https://github.com/NahuelSilva28/holbertonschool-higher_level_programming/blob/main/python-everything_is_object/image-43.png))
-![alt text](i[mageURL](https://github.com/NahuelSilva28/holbertonschool-higher_level_programming/blob/main/python-everything_is_object/image-43.png))
+![image-43](https://github.com/NahuelSilva28/holbertonschool-higher_level_programming/assets/104049259/4efd95d7-1bcc-4b78-8cb5-9878b5297b2a)
 
 # Understanding Mutable and Immutable Objects in Python
+
 
 Introduction:
 In Python, objects can be classified as mutable or immutable, which affects how they are stored in memory and treated by the language. Let's explore the key concepts and differences between mutable and immutable objects, and why they matter in Python.
