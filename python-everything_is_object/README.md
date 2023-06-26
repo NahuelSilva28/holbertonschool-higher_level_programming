@@ -1,6 +1,6 @@
 # Python - Everything is object
 
-![alt text](i[mageURL](https://github.com/NahuelSilva28/holbertonschool-higher_level_programming/blob/main/python-everything_is_object/image-43.png) ":)")
+![alt text](i[mageURL](https://github.com/NahuelSilva28/holbertonschool-higher_level_programming/blob/main/python-everything_is_object/image-43.png))
 
 # Understanding Mutable and Immutable Objects in Python
 
