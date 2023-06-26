@@ -8,6 +8,9 @@
 Introduction:
 In Python, objects can be classified as mutable or immutable, which affects how they are stored in memory and treated by the language. Let's explore the key concepts and differences between mutable and immutable objects, and why they matter in Python.
 
+What is 'id' and 'type'?
+Before delving into mutable and immutable objects, let's briefly explain the terms 'id' and 'type.' In Python, 'id' refers to the unique identifier assigned to each object, which remains constant throughout its lifetime. It provides a way to distinguish one object from another. On the other hand, 'type' refers to the classification or category of an object, such as integer, string, list, or dictionary.
+
 Mutable Objects:
 Mutable objects can be modified after creation without changing their identity. Examples include lists, dictionaries, sets, and byte arrays.
 
