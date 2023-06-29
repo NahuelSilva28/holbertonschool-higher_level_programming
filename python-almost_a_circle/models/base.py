@@ -4,13 +4,13 @@
 import json
 
 class Base:
-    """BASE CLASS"""
+    """Base class"""
 
     __nb_objects = 0
 
-    def __init__(self, id=None):
-        if id is not None:
-            self.id = id
+    def __init__(self, base_id=None):
+        if base_id is not None:
+            self.id = base_id
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
