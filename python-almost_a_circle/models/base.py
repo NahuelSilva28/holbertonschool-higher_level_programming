@@ -1,11 +1,7 @@
 #!/usr/bin/python3
 """Base class"""
 
-
 import json
-from venv import create
-
-
 
 class Base:
     """BASE CLASS"""

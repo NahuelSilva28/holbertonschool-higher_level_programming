@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 """Rectangle class from base"""
 
-
-from base import Base
-
+from .base import Base
 
 class Rectangle(Base):
     """Rectangle class"""
@@ -15,6 +13,7 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
+
 
     @property
     def width(self):

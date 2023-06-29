@@ -1,14 +1,16 @@
 import unittest
-from base import Base
-
+from models.base import Base
 
 class TestBase(unittest.TestCase):
-    def test_2(self):
-        a = Base()
-        self.assertEqual(a.id, 1)
-        b = Base(5)
-        self.assertEqual(b.id, 5)
+    def test_id(self):
+        # Test initialization with specific id
+        b1 = Base(1)
+        self.assertEqual(b1.id, 1)
 
+        # Test automatic id assignment
+        b2 = Base()
+        self.assertEqual(b2.id, 2)
 
+   
 if __name__ == '__main__':
     unittest.main()

@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 """Square class from rectangle"""
 
-
-from rectangle import Rectangle
-
+from .rectangle import Rectangle
 
 class Square(Rectangle):
     """Square class"""
