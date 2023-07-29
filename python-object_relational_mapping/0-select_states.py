@@ -1,9 +1,14 @@
-#!/usr/bin/env python3
-"""0. Get all states
-mandatory
-Write a script that lists all states from the database hbtn_0e_0_usa:"""
-import MySQLdb
+#!/usr/bin/python3
+"""
+This script retrieves and lists all states from the database hbtn_0e_0_usa.
+It requires three arguments: mysql username, mysql password, and database name.
+It utilizes the MySQLdb module for database connectivity.
+The script connects to a MySQL server running on localhost at port 3306.
+Results are sorted in ascending order by states.id.
+"""
+
 import sys
+import MySQLdb
 
 def get_states(username, password, database):
     try:
@@ -17,10 +22,13 @@ def get_states(username, password, database):
         )
 
         cursor = db.cursor()
-        cursor.execute("SELECT MIN(id), name FROM states GROUP BY name ORDER BY MIN(id) ASC")
+        cursor.execute("SELECT * FROM states ORDER BY id")
         results = cursor.fetchall()
+
+        # Print the results
         for row in results:
             print(row)
+
         cursor.close()
         db.close()
 
@@ -28,8 +36,9 @@ def get_states(username, password, database):
         print("Error connecting to MySQL:", e)
         sys.exit(1)
 
+# Check if the script is being run directly, not imported as a module
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
+    if len(sys.argv) < 4:
         print("Usage: ./0-select_states.py <username> <password> <database>")
         sys.exit(1)
 
@@ -38,3 +47,4 @@ if __name__ == "__main__":
     database = sys.argv[3]
 
     get_states(username, password, database)
+
