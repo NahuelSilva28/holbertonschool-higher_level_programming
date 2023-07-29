@@ -17,7 +17,7 @@ def get_states(username, password, database):
         )
 
         cursor = db.cursor()
-        cursor.execute("SELECT * FROM states ORDER BY name ASC")
+        cursor.execute("SELECT MIN(id), name FROM states GROUP BY name ORDER BY MIN(id) ASC")
         results = cursor.fetchall()
         for row in results:
             print(row)
@@ -38,4 +38,4 @@ if __name__ == "__main__":
     database = sys.argv[3]
 
     get_states(username, password, database)
- 
+
