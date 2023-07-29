@@ -1,13 +1,8 @@
 #!/usr/bin/python3
 """
-This script retrieves and lists all states from the database hbtn_0e_0_usa
+This script retrieves and displays all values in the states table of hbtn_0e_0_usa
 where the name matches the user-provided argument.
-It requires four arguments: mysql username, mysql password, database name, and state name to search.
-It utilizes the MySQLdb module for database connectivity.
-The script connects to a MySQL server running on localhost at port 3306.
-Results are sorted in ascending order by states.id.
 """
-
 import sys
 import MySQLdb
 
@@ -24,8 +19,9 @@ def filter_states_by_name(username, password, database, state_name):
         )
 
         with db.cursor() as cursor:
-            query = "SELECT * FROM states WHERE name LIKE BINARY %s ORDER BY id"
-            cursor.execute(query, (state_name,))
+            # Use format to create the SQL query with the user input
+            query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(state_name)
+            cursor.execute(query)
             results = cursor.fetchall()
 
             # Print the results
